@@ -13,6 +13,7 @@ import { history } from '../../store';
 import config from '../../okta_config';
 
 import Home from '../Home';
+import Account from '../Account';
 import Demo from '../Demo';
 import Login from '../Auth/Login';
 import Register from '../Auth/Register';
@@ -38,7 +39,6 @@ class Routes extends React.Component {
       <Security auth={auth}>
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* <Route exact path="/" render={() => <Redirect to="/demo" />} /> */}
           <Route
             path="/login"
             exact
@@ -49,6 +49,10 @@ class Routes extends React.Component {
           <Route path="/demo" component={Demo} />
 
           <Route path="/implicit/callback" component={ImplicitCallback} />
+          <SecureRoute
+            path="/account"
+            component={Account}
+          />
           <SecureRoute
             path="/eventstorefactory/:address"
             exact

@@ -47,3 +47,13 @@ export const changePasswordSuccess = data => ({
   type: Constants.CHANGE_PASSWORD_SUCCESS,
   payload: data
 });
+
+export const requestEthereumChallenge = data => ({
+  type: Constants.REQUEST_ETHEREUM_CHALLENGE,
+  payload: data
+});
+
+export const submitEthereumChallenge = data => ({
+  type: Constants.SUBMIT_ETHEREUM_CHALLENGE,
+  payload: data
+});

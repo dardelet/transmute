@@ -42,7 +42,7 @@ class PrimaryMenu extends Component {
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
-        {/* <ListItem button key={'account'}>
+        <ListItem button key={'account'}>
           <Link to="/account">
             <ListItemIcon>
               <Fingerprint />
@@ -50,7 +50,7 @@ class PrimaryMenu extends Component {
           </Link>
           <ListItemText primary="Account" />
         </ListItem>
-        <ListItem button key={'settings'}>
+        {/* <ListItem button key={'settings'}>
           <Link to="/settings">
             <ListItemIcon>
               <Settings />

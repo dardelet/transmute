@@ -39,6 +39,20 @@ export const loginApiCall = (oktaAuth, email, password) => {
   };
 };
 
+export const requestEthereumChallenge = async (auth) => {
+  try {
+    let response = await middleware.requestEthereumChallenge(auth);
+    console.log('here\'s my response: ', response);
+    return actionCreators.requestEthereumChallenge({
+      ...response.data
+    });
+  } catch (e) {
+    return actionCreators.registerError({
+      ...e
+    });
+  }
+};
+
 export const setWeb3Account = (web3Account) => {
   return dispatch => {
     dispatch(actionCreators.setWeb3Account(web3Account));
